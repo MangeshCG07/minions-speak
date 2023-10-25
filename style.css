@@ -49,3 +49,17 @@ main {
     padding: 1rem;
     max-width: var(--width-break);
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+footer p {
+  max-width: var(--width-break);
+  margin: auto;
+}
