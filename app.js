@@ -20,9 +20,12 @@ function clickHandler() {
   var inputText = txtInput.value;
   fetch(getTranslationUrl(inputText))
     .then((response) => response.json())
-    .then((json) => console.log(json.contents.translated))
+    .then(json => {
+      var  translatedText = json.contents.translated;
+      outputDiv.innerText = translatedText;
+      console.log(json.contents.translated)})
     .catch(errorHandler);
-    outputDiv.innerText = json.contents.translated
+
 }
 
 btnTranslate.addEventListener("click", clickHandler);
